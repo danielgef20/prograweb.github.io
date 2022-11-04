@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<a href="../C7.html"><img src = "../../home.png" width="65" height="50" alt = "Inicio"></a>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Programa del promedio de una clase</title>
+        <script>
+            var total;
+            var contadorCalificaciones;
+            var calificacion;
+            var valorCalificacion;
+            var promedio;
+
+            total = 0;
+            contadorCalificaciones = 1
+
+            while (contadorCalificaciones <= 10)
+            {
+                calificacion = window.prompt ("Escriba la calificación entera:", "0");
+                valorCalificacion = parseInt(calificacion);
+                total = total + valorCalificacion;
+                contadorCalificaciones = contadorCalificaciones + 1;
+            }
+
+            promedio = total / 10;
+            document.writeln("<h1>El promedio de la clase es "+ promedio + "</h1>");
+        </script>
+    </head><body></body>
+</html>

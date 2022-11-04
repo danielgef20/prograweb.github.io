@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<a href="../C8.html"><img src = "../../home.png" width="65" height="50" alt = "Inicio"></a>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Repetición controlada por contador</title>
+    <style type = "text/css">
+        table   {width: 300px;
+                border-collapse: collapse;
+            background-color: lightblue;}
+        table, td, th   {border: 1px solid black;
+                        padding: 4px;}
+        th      {text-align:left;
+                color:white;
+                background-color: darkblue;}
+        tr.filaimpar    {background-color: white;}
+
+    </style>
+    <script>
+        var monto;
+        var principal = 1000.00;
+        var tasa = 0.05;
+
+        document.writeln("<table>");
+        document.writeln(
+            "<caption>Calculo del interes compuesto </caption>");
+        document.writeln(
+            "<thread><tr><th>Año</th>");
+        document.writeln(
+            "<th>Monto en deposito</th>");
+        document.writeln("</tr></thead><tbody>");
+
+        for ( var anio = 1; anio <= 10; ++anio){
+            monto = principal = Math.pow(1.0 + tasa, anio);
+            if (anio % 2 !== 0)
+                document.writeln("<trclass=filaimpar'><td>" + anio + "</td><td>" + monto.toFixed(2) + "</td></tr>");
+        }
+
+        document.writeln("</tbody></table>");
+    </script>
+</head>
+<body></body>
+</html>
